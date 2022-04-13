@@ -1,0 +1,88 @@
+﻿data item,class(s),nature,resolution time,aggregation(s),source,link(s),processed,require(s),job(s),team(s),rank,owner,added_by,info_further
+"MW, MVAR",generation,EMS,any,unit,PI,"Excel PI DataLink,PI SDK,OLEDB / ODBC",0_PI,pi-tag,_,_,0,_,_,_
+MW,generation,EMS,any,asset,PI,"Excel PI DataLink,PI SDK,OLEDB / ODBC",0_PI,pi-tag,_,_,0,_,_,_
+MW,generation,EMS,current,asset,CSD,http,0_CSD,MPID,_,_,0,_,_,_
+MW,generation,EMS,any,fuel,PI,"Excel PI DataLink,PI SDK,OLEDB / ODBC",0_PI,pi-tag,_,_,0,_,_,_
+"MW, MVAR",generation,EMS,any,unit,SPA Dashboard,http,2_PI,substation,_,_,0,_,_,_
+MW,generation,EMS,any,asset,SPA Dashboard,http,2_PI,substation,_,_,0,_,_,_
+MW,generation,EMS,any,"technology*,area*,region*",SPA Dashboard,http,2_PI,_,_,_,0,_,_,_
+"MW, MVAR",generation,metering,hourly,asset,"Oracle, EDWP","PLSQL,OLEDB / ODBC",1_meter,MPID,_,_,0,_,_,_
+"MW, MVAR",generation,metering,hourly,asset,SPA Dashboard,http,2_meter,MPID,_,_,0,_,_,_
+"MW, MVAR",generation,metering,hourly,"technology*,area*,region*",SPA Dashboard,http,2_meter,_,_,_,0,_,_,_
+MW,generation,metering,hourly,asset,GR-Dashboard,http,2_meter,MPID,_,_,0,_,_,_
+MW,generation,metering,hourly,"technology*,area*,region*",GR-Dashboard,http,2_meter,_,_,_,0,_,_,_
+"MW, MVAR",generation,metering,15 minute,asset,"Oracle, TASP","PLSQL,OLEDB / ODBC",1_meter,MPID,_,_,0,_,_,_
+"MW, MVAR",load,EMS,any,substation,PI,"Excel PI DataLink,PI SDK,OLEDB / ODBC",0_PI,pi-tag,_,_,0,_,_,_
+"MW, MVAR",load,EMS,any,substation,PI,OLEDB / ODBC,0_PI,pi-tag,_,_,0,_,_,_
+MW,load,EMS,any,area,PI,"Excel PI DataLink,PI SDK,OLEDB / ODBC",0_PI,pi-tag,_,_,0,_,_,_
+MW,load,EMS,any,AIES,PI,"Excel PI DataLink,PI SDK,OLEDB / ODBC",0_PI,pi-tag,_,_,0,_,_,_
+"MW, MVAR",load,EMS,any,substation,SPA Dashboard,http,2-PI,substation,_,_,0,_,_,_
+MW,load,EMS,any,area,SPA Dashboard,http,2-PI,area#,_,_,0,_,_,_
+MW,load,EMS,any,region*,SPA Dashboard,http,2-PI,_,_,_,0,_,_,_
+MW,load,EMS,any,AIES,SPA Dashboard,http,2-PI,_,_,_,0,_,_,_
+"MW, MVAR",load,metering,hourly,MPID,"Oracle, EDWP","PLSQL,OLEDB / ODBC",1_meter,SQL,_,_,0,_,_,_
+"MW, MVAR",load,metering,hourly,MPID,SPA Dashboard,http,2_meter,MPID,_,_,0,_,_,_
+"MW, MVAR",load,metering,hourly,"technology*,area*,region*",SPA Dashboard,http,2_meter,_,_,_,0,_,_,_
+MW,load,metering,hourly,MPID,GR-Dashboard,http,2_meter,MPID,_,_,0,_,_,_
+MW,load,metering,hourly,"technology*,area*,region*",GR-Dashboard,http,2_meter,_,_,_,0,_,_,_
+"MW, MVAR",load,metering,15 minute,MPID,"Oracle, TASP","PLSQL,OLEDB / ODBC",1_meter,SQL,_,_,0,_,_,_
+status,generation,EMS,any,unit,PI,"Excel PI DataLink,PI SDK,OLEDB / ODBC",0-PI,pi-tag,outage_gen,"grid_analytics,outage_coordination",0,_,_,_
+status,generation,EMS,any,unit,SPA Dashboard,http,2_PI,"substation,unit",outage_gen,"grid_analytics,outage_coordination",0,_,_,_
+"MVA, MW,  MVAr",transmission,EMS,any,branch,PI,"Excel PI DataLink,PI SDK,OLEDB / ODBC",0_PI,pi-tag,utilization_tx,grid_analytics,0,_,_,_
+"MVA, MW,  MVAr",transmission,EMS,any,cut-plane,PI,"Excel PI DataLink,PI SDK,OLEDB / ODBC",0_PI,pi-tag,_,_,0,_,_,_
+"MVA, MW,  MVAr",transmission,EMS,any,branch,SPA Dashboard,http,2-PI,"substation,line",utilization_tx,grid_analytics,0,_,_,_
+"MVA, MW,  MVAr",transmission,EMS,any,cut-plane,SPA Dashboard,http,2-PI,user defined,_,_,0,_,_,_
+status,transmission,EMS,any,line-terminal,PI,"Excel PI DataLink,PI SDK,OLEDB / ODBC",0-PI,pi-tag,outage_tx,"grid_analytics,outage_coordination",0,_,_,_
+status,transmission,EMS,any,line-terminal,SPA Dashboard,http,2_PI,"substation,line",outage_tx,"grid_analytics,outage_coordination",0,_,_,_
+rating,transmission,EMS,any,line-terminal,PI,"Excel PI DataLink,PI SDK,OLEDB / ODBC",0-PI,pi-tag,"outage_tx,utilization_tx","grid_analytics,outage_coordination",0,_,_,_
+rating,transmission,EMS,any,line-terminal,SPA Dashboard,http,2_PI,"substation,line","outage_tx,utilization_tx","grid_analytics,outage_coordination",0,_,_,_
+rating,transmission,TFO,any,branch,DFS folders,files,0_DFS,_,"outage_tx,utilization_tx","grid_analytics,outage_coordination",0,_,_,\\aeso.ca\dfs\Technical\te\20\45\
+MC,generation,market,any,asset,PI,"Excel PI DataLink,PI SDK,OLEDB / ODBC",0-PI,pi-tag,_,_,0,_,_,_
+MC,generation,market,current,asset,CSD,http,0-CSD,MPID,_,_,0,_,_,_
+MC,generation,market,any,asset,"Oracle, EDWP","PLSQL,OLEDB / ODBC",0_EDWP,SQL,_,_,0,_,_,bil.csd_asset_v
+MC,generation,market,any,asset,SPA Dashboard,http,2_PI,MPID,_,_,0,_,_,_
+MC,generation,market,any,"technology*,area*,region*",SPA Dashboard,http,2_PI,MPID,_,_,0,_,_,_
+AC,generation,market,any,asset,PI,"Excel PI DataLink,PI SDK,OLEDB / ODBC",0-PI,pi-tag,outage_gen,"grid_analytics,outage_coordination",0,_,_,_
+AC,generation,market,any,asset,"Oracle, EDWP","PLSQL,OLEDB / ODBC",0_EDWP,SQL,outage_gen,"grid_analytics,outage_coordination",0,_,_,bil.total_declared_energy_v
+AC,generation,market,any,asset,SPA Dashboard,http,2_PI,MPID,outage_gen,"grid_analytics,outage_coordination",0,_,_,_
+AC,generation,market,any,"technology*,area*,region*",SPA Dashboard,http,2_PI,MPID,_,_,0,_,_,_
+dispatch,generation,market,any,asset,PI,"Excel PI DataLink,PI SDK,OLEDB / ODBC",0-PI,pi-tag,_,_,0,_,_,_
+dispatch,generation,market,any,asset,"Oracle, EDWP","PLSQL,OLEDB / ODBC",0_EDWP,SQL,_,_,0,_,_, BIL_DT.ETS_DISPATCH_LOG_T
+dispatch,generation,market,any,asset,SPA Dashboard,http,2_PI,MPID,_,_,0,_,_,_
+dispatch,generation,market,any,"technology*,area*,region*",SPA Dashboard,http,2_PI,MPID,_,_,0,_,_,_
+EMMO,generation,market,hourly,block,"Oracle, EDWP","PLSQL,OLEDB / ODBC",0_EDWP,SQL,_,_,0,_,_,_
+EMMO,generation,market,hourly,block,Flexibility Dashboard,http,0_EDWP,_,_,_,0,_,_,_
+shift_log,system,EMS,@time,system,"Oracle, EDWP","PLSQL,OLEDB / ODBC",0_EDWP,SQL,"outage_tx,outage_gen","grid_analytics,outage_coordination",0,_,_,_
+outage,system,EMS,@time,_,"Oracle, EDWP","PLSQL,OLEDB / ODBC",0_EDWP,SQL,"outage_tx,outage_gen","grid_analytics,outage_coordination",0,_,_,_
+price,system,market,any,AIES,PI,"Excel PI DataLink,PI SDK,OLEDB / ODBC",0-PI,pi-tag,_,_,0,_,_,_
+price,system,market,any,AIES,"Oracle, EDWP","PLSQL,OLEDB / ODBC",0_EDWP,SQL,_,_,0,_,_,_
+DTS,load,tariff,any,MPID,DFS folders,files,0_DFS,_,_,_,0,_,_,_
+STS,generation,tariff,any,MPID,DFS folders,files,0_DFS,_,_,_,0,_,_,_
+DTS,load,tariff,any,MPID,SPA Dashboard,http,1_DFS,MPID,_,_,0,_,_,_
+STS,generation,tariff,any,MPID,SPA Dashboard,http,1_DFS,MPID,_,_,0,_,_,_
+MW,load,forecast,hourly,MPID,"Oracle, EDWP","PLSQL,OLEDB / ODBC",0_EDWP,SQL,_,_,0,_,_,_
+MW,load,forecast,hourly,"MPID,technology*,area*,region*",GR-Dashboard,http,0_EDWP,_,_,_,0,_,_,_
+MW,generation,forecast,hourly,MPID,"SQL_server, AURORA","MSSMS,OLEDB / ODBC",0_Aurora,SQL,_,_,0,_,_,_
+MW,generation,forecast,hourly,MPID,Flexibility Dashboard,http,1_Aurora,_,_,_,0,_,_,_
+MW,transmission,forecast,hourly,MPID,"SQL_server, AURORA","MSSMS,OLEDB / ODBC",0_Aurora,SQL,_,_,0,_,_,_
+MW,transmission,forecast,hourly,MPID,Flexibility Dashboard,http,1_Aurora,_,_,_,0,_,_,_
+MW,wind&solar,forecast_st,any,MPID,"Oracle, EDWP","PLSQL,OLEDB / ODBC",0_EDWP,SQL,_,_,0,_,_,_
+MW,wind&solar,forecast_st,any,MPID,SPA Dashboard,http,1_EDWP,MPID,_,_,0,_,_,_
+MW,load,forecast_st,hourly,AIES,"Oracle, EDWP","PLSQL,OLEDB / ODBC",0_EDWP,SQL,_,_,0,_,_,_
+price,system,forecast_st,hourly,AIES,"Oracle, EDWP","PLSQL,OLEDB / ODBC",0_EDWP,SQL,_,_,0,_,_,_
+weather items (tbd),weather,forecast_st,hourly,AIES,"Oracle, EDWP","PLSQL,OLEDB / ODBC",0_EDWP,SQL,_,_,0,_,_,WFS.WEATHER_ALL_V
+cost,transmission,benchmark,_,_,"Oracle, TASP","PLSQL,OLEDB / ODBC",0_TASP,SQL,_,_,0,_,_,_
+cost,transmission,benchmark,_,_,Tableau server,http,1_TASP,tableau account,_,_,0,_,_,_
+cost,transmission,estimate,_,_,TCE Dashboard,http,1_DFS,_,_,_,0,_,_,_
+GIS,system,mapping,_,_,"Oracle, TASP","PLSQL,OLEDB / ODBC",0_TASP,SQL,_,_,0,_,_,_
+GIS,system,mapping,_,_,"Oracle, TASP",TASMo,0_TASP,_,_,_,0,_,_,_
+topology,system,mapping,_,_,"Oracle, TASP","PLSQL,OLEDB / ODBC",0_TASP,SQL,_,_,0,_,_,_
+topology,system,mapping,_,_,"Oracle, TASP",TASMo,0_TASP,SQL,_,_,0,_,_,_
+MPID-BUS,transmission,mapping,_,MPID,"Oracle, TASP","PLSQL,OLEDB / ODBC",0_TASP,SQL,_,_,0,_,_,_
+MPID-substation,system,mapping,_,MPID,DFS folders,files,0_DFS,PDF,_,_,0,_,_,\\aeso.ca\dfs\Technical\te\01/01
+MPID-substation,system,mapping,_,MPID,"Oracle, TASP","PLSQL,OLEDB / ODBC",0_TASP,SQL,_,_,0,_,_,_
+MPID-substation,system,mapping,_,MPID,SPA Dashboard,http,mix,MPID,_,_,0,_,_,_
+mix,_,project,_,_,DFS folders,files,0_DFS,RPID,_,_,0,_,Nima,\\aeso.ca\dfs\Technical\rp\05
+mix,_,project,_,_,workfront ,workfront ,0_workfront,RPID,_,_,0,_,Nima,https://aesotransmission.my.workfront.com/
+"F,I,V,Phase",_,pmu,30Hz,"feeder,bus",PRODPCU05,RDP,0_PMU,pmu,event_analysis,_,0,_,_,\\aeso.ca\applications\RTSync_PDC (SDC)
+"F,I,V,Phase",_,pmu,event,"feeder,bus",SPA Dashboard,http,1_EDWP,pmu,event_analysis,_,0,_,_,_

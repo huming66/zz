@@ -1,0 +1,27 @@
+.articleOff{
+    font-size: 12px;
+    color: blue; 
+    /* border: 1px dotted grey;  */
+    background-color: lightgrey; 
+    margin: 1px 3px;
+    padding: 1px 3px;
+    border-radius: 10px;
+    /* overflow-wrap: break-word; */
+}
+.articleOff:hover{
+    background-color: lightpink ;
+    font-size: 120%
+}
+.articleOn{
+    color: red;   
+    background-color: lightgreen ;  
+}
+#summaryArticle {
+    color: brown;
+    margin: 1px 3px;
+    padding: 1px 3px;
+    border-radius: 10px;
+    background-color: lightgreen;
+    border: 3px solid grey; 
+    /* align-self: flex-start; */
+}

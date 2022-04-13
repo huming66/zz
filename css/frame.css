@@ -1,0 +1,99 @@
+body {
+    background: #ccc;
+    font-family: 'Roboto', sans-serif;
+}
+[class^="hmTabs"]  {
+    display: flex;
+    flex-wrap: wrap;
+    /* max-width: 600px; */
+    margin: 0px auto;
+    padding: 1px;
+}
+[class^="hmTabs"] input[type="radio"] {
+    display: none;
+}
+[class^="hmTabs"] label {
+    padding: 5px;
+    background: #e2e2e2;
+    font-weight: bold;
+}
+[class^="hmTabs"] .tab {
+    width: 100%;
+    padding: 5px;
+    background: #fff;
+    order: 1;
+    display: none;                                                /* hide */
+}
+[class^="hmTabs"] .tab h2 {
+    font-size: 3em;
+}
+
+[class^="hmTabs"] input[type='radio']:checked + label + .tab {    /* show label & tab */
+    display: grid;
+}
+[class^="hmTabs"] input[type="radio"]:checked + label {           /* change colors  of label */
+    background: #fff;
+    color:blue;
+}
+
+.hmTab {
+    display: grid;
+    grid-template-columns: auto auto;                            /* side | main */
+    grid-gap: 2px;
+    align-items: start;
+    /* overflow:auto; */
+    /* grid-template-rows: 60px auto 60px; */
+    /* grid-template-areas: "hd hd"
+                        "sidebar main"
+                        "footer footer";     */
+    /* grid-template-columns: repeat(10, 1fr);
+    grid-template-areas : "a a a b b b b b b b"                         */
+}    
+.hmTab .left{
+    background: wheat;
+    width: 70vw;
+    max-width: 80vw;
+    min-width: 40vw;
+    height: 90vh;
+    max-height: 90vh;
+    min-height: 50vh;
+    resize: both; 
+    overflow: hidden;
+}
+.hmTab .right{
+    display: grid;
+    background: lightblue;
+    grid-template-rows: 2fr auto;
+    resize: both;  /* overflow: auto;   */
+    grid-gap: 10px;
+    align-items: start;
+}
+.up {
+    background: lightskyblue;
+    resize: vertical;  overflow: auto;
+    height: 60VH;  
+    max-height: 60vh;
+    min-height: 30vh;
+    max-width: 80vw;
+    display: grid;
+    border: 3px solid grey; 
+    border-radius: 10px;    
+}
+.down1 {
+    /* background: lightgrey;
+    height: auto;
+    resize: vertical; */
+    border: 3px solid grey; 
+    border-radius: 10px;   
+}
+
+
+
+summary {
+    background-color:lightsteelblue;
+    font-weight: bold;
+}
+.hide tr>*:nth-child(4), .hide tr>*:nth-child(5), .hide tr>*:nth-child(6), .hide tr>*:nth-child(7), .hide tr>*:nth-child(8) {
+    display: none;
+}
+  

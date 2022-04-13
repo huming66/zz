@@ -1,0 +1,231 @@
+/* === from https://syntagmatic.github.io/parallel-coordinates/style.css */
+
+#vizPC {
+    /* width:60%; */
+    margin-left:1px;
+    margin-right:1px;
+    /* height:800px; */
+    background:#ffe;
+    /* display:inline-block;   */
+    resize: both;
+    overflow: auto;
+    border: 5px solid slateblue;
+    border-radius: 16px;
+  }
+  #listArticle {
+    /* margin-left:1px;
+    margin-right:1px;
+    background:#ffe; */
+    /* display:inline-block;  
+    /* resize: both;
+    overflow: auto; */ */
+    /* border: 5px solid slateblue;
+    border-radius: 16px; */
+  }
+  .brush rect.extent {
+    fill: red;
+  }
+  
+  body {
+    font-size: 14px;
+    font-family: "Helvetica Neue", Arial, Helvetica, sans-serif;
+    margin: 10px 100px 0px 10px;
+    width: 99%; /* 720px; */
+    background: hsla(180, 4%, 86%, 0.938);
+    /* line-height: 1.45em; */
+    float: left;
+  }
+  a {
+    color: #555;
+  }
+  a:hover {
+    color: #000;
+  }
+  ul {
+    margin: 0 20px;
+    padding: 0;
+  }
+  .dark {
+    background: #222;
+  }
+  #example0,
+  #example,
+  #example-axes,
+  #example1,
+  #example2,
+  #example3,
+  #example-zscore,
+  #example-progressive {
+    height: 200px;
+    margin: 12px 0;
+  }
+  p {
+    width: 560px;
+  }
+  pre {
+    color: #444;
+    font-family: Ubuntu Mono, Monaco, monospace;
+    padding: 4px 8px;
+    background: #f2f2f2;
+    border: 1px solid #ccc;
+    word-wrap: auto;
+  }
+  h1 small {
+    font-weight: normal;
+    font-size: 0.5em;
+  }
+  h3 {
+    margin-top: 40px;
+  }
+  .float {
+    float: left;
+  }
+  .centered {
+    text-align: center;
+  }
+  .hide {
+    display: none;
+  }
+  input {
+    font-size: 16px;
+  }
+  
+  /* ================================= */
+  svg {
+    font: 10px sans-serif;
+  }
+  
+  .background path {
+    fill: none;
+    stroke: #ddd;
+    shape-rendering: crispEdges;
+  }
+  
+  .foreground path {
+    fill: none;
+    stroke: rgb(2, 60, 107);  /* steelblue */
+  }
+  
+  .brush .extent {
+    fill-opacity: .2;
+    stroke: #ff0;
+    shape-rendering: crispEdges;
+    fill: red !important;
+  }
+  
+  .axis line,
+  .axis path {
+    fill: none;
+    stroke: #000;
+    shape-rendering: crispEdges;
+  }
+  
+  /* hmhm: for text on axis.tick only */
+  g.dimension g.tick text {
+    text-shadow: 0 1px 0 #ddd, 1px 0 0 #ddd, 0 -1px 0 #ddd, -1px 0 0 #ddd;
+    font-size: 15px !important;
+    transform: translate(-0px, -5px) rotate(-0deg); 
+  }
+  g.dimension g.tick text:hover {
+    font-size: 120% !important;
+  }
+  /* hmhm: for axis title only */
+  g.dimension g.axis text.label {           
+    color: #1401ef  !important;    
+    font-weight: bold  !important;          
+    /* transform: translate(-0px, -10px) rotate(+20deg);  */
+  }
+  
+  /* [class^='lab_']:hover {
+    font-size: 20px  !important;
+  }*/
+  
+  .label {
+    font: 15px Arial Narrow  !important;
+    transform: translate(-0px, -30px)
+  }
+  .label:hover {
+    font: 20px Arial Narrow  !important;
+    font-weight: bold !important;
+  }
+  /* #caseselector { 
+    position: absolute; left: 90%; top: 70%; 
+  } */
+  
+  iframe {
+    resize: both;
+    overflow: auto;
+  }
+  
+  
+  #labelDetail, #line1
+  {
+      display: inline;
+  }
+  #labelDetail
+  {
+      float: right
+  }
+  
+  [id^='obs_'] {
+    font-size: 30px  !important;
+  }
+  
+  .dimOff {
+    font-size: 11px;
+    text-decoration: line-through; 
+    background: #d4d3d3; 
+    text-align:right;
+  }
+  .dimOn {
+    font-size: 12px;
+    background: #37b4fc59; 
+  }
+  
+  .jstree-leaf {
+    font-size: 11px;
+    height: 13px !important;
+    min-height: 12px !important;
+  }
+  
+  .jstree-anchor {
+    display: initial !important;
+  }
+  
+  .row, .header {
+    clear: left;
+    font-size: 10px;
+    line-height: 18px;
+    height: 18px;
+  }
+  .row:nth-child(odd) {
+    background: rgba(0,0,0,0.25);
+  }
+  .cell {
+    float: left;
+    overflow: hidden;
+    white-space: nowrap;
+    width: 70%;
+    height: 16px;
+  }
+  .col-0 {
+    font-size: 14px;
+    float: left;
+    overflow: hidden;
+    white-space: nowrap;
+    width: 25%;
+    height: 18px;
+    color: blue;
+    font-weight: bold;
+  }
+  
+  .col-0:hover {
+    font-size: 20px;
+    color: red;
+  }
+  
+  .header {
+    background: rgb(247, 231, 6);
+    font-weight: bold;
+    /* color: black !important; */
+  }
