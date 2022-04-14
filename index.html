@@ -5,15 +5,15 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
     <title>国际金融杂志</title>
-    <script src="../lib/jquery-latest.js"></script>
+    <script src="./lib/jquery-latest.js"></script>
     <script src="https://syntagmatic.github.io/parallel-coordinates/examples/lib/d3.min.js"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jstree/3.2.1/themes/default/style.min.css" />
-    <link rel="stylesheet" href="../lib/css/glyphicons.css" />
+    <link rel="stylesheet" href="./lib/css/glyphicons.css" />
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jstree/3.2.1/jstree.min.js"></script>
-    <script type="text/javascript" src="../lib/FileSaver.min.js"></script>
-    <link rel="stylesheet" type="text/css" href="../lib/css/d3.parcoords.css">
-    <script src="../lib/d3.parcoords_org.js"></script>
-    <script src="../lib/d3.svg.multibrush.js"></script>
+    <script type="text/javascript" src="./lib/FileSaver.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="./lib/css/d3.parcoords.css">
+    <script src="./lib/d3.parcoords_org.js"></script>
+    <script src="./lib/d3.svg.multibrush.js"></script>
 
     <link rel="stylesheet" href="./css/frame.css">
     <link rel="stylesheet" href="./css/style.css">
@@ -25,19 +25,18 @@
     <div class="hmTabs" onchange="tabChange(this)">
 
 
-        <input type="radio" id="tab_1" name="hmTabs" checked="checked" value="lv1"> <label for="tab_1">索引</label>
+        <input type="radio" id="tab_1" name="hmTabs" checked="checked" value="lv1"> <label for="tab_1">文章索引</label>
         <div class="tab hmTab">
                 <div class="left parcoords" id="vizPC" onmouseup="resize_pc()">
 
                 </div>
                 <div class="right">
-                    <div class='down' id="summaryArticle">
-                        文章摘要
-                    </div>                    
                     <div class="up" id="listArticle">
                         文章列表
                     </div>
-
+                    <div class='down' id="summaryArticle">
+                        文章摘要<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+                    </div>
                 </div>
 
         

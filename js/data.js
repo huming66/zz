@@ -229,5 +229,6 @@ function resize_pc() {
     w: $("#vizPC").width()
   }
   refresh_pc()
+  // parcoords.resize()
 }
 //=================== resize vizPC

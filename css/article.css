@@ -23,6 +23,8 @@
     border-radius: 10px;
     background-color: lightgreen;
     border: 3px solid grey; 
-    /* align-self: flex-start; */
-    /* grid-row: 1; */
+    /* min-height: 20vh; */
+    /* resize: vertical; */
+    /* align-self: flex-start;
+    grid-row: 1; */
 }
