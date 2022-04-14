@@ -18,6 +18,11 @@ function refresh_pc(filtered = 0) {
       //     data = brkColumn(data, col)
       //   }) 
       // }
+      data = data.slice(0,100)
+      data.forEach(v => {
+        if (v.title) return
+        v.title = v.paragraphs[0].replaceAll('。','')
+      })
       var treeData_filter = [  
         {id: 'string_', type:'group',text:'Column in string',children:[]},
         {id: 'number_', type:'group',text:'Column in number',children:[]}
