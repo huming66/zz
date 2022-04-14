@@ -1,20 +1,23 @@
 var __zz = {
   csv: './data/dataInGR.csv',
+  json: './data/sc.json',
   config_hm : {
-    keyHide: ['QC', 'info_further', 'job(s)','team(s)','rank','owner','added_by','source']
+    // keyHide: ['QC', 'info_further', 'job(s)','team(s)','rank','owner','added_by','source']
+    keyHide: ['paragraphs', 'notes','title']
   }
 
 }
 function refresh_pc(filtered = 0) {
     d3.select("#vizPC").html("")
-    d3.csv(__zz.csv, function (data) {      // to set "" to undifined for showing invalid value
+    // d3.csv(__zz.csv, function (data) {      // to set "" to undifined for showing invalid value
+    d3.json(__zz.json, function (data) {      // to set "" to undifined for showing invalid value
       // for combined-column
-      var cmbColumns = Object.keys(data[0]).filter(v => v.slice(-3) == '(s)')
-      if (cmbColumns.length>0) {
-        cmbColumns.forEach(col => {
-          data = brkColumn(data, col)
-        }) 
-      }
+      // var cmbColumns = Object.keys(data[0]).filter(v => v.slice(-3) == '(s)')
+      // if (cmbColumns.length>0) {
+      //   cmbColumns.forEach(col => {
+      //     data = brkColumn(data, col)
+      //   }) 
+      // }
       var treeData_filter = [  
         {id: 'string_', type:'group',text:'Column in string',children:[]},
         {id: 'number_', type:'group',text:'Column in number',children:[]}
@@ -134,7 +137,8 @@ function refresh_pc(filtered = 0) {
         // parcoords.render();	
         //hm: data grid	
         __zz.brushed = parcoords.brushed()
-        update_ListArticle(parcoords.brushed())
+        // update_ListArticle(parcoords.brushed())
+        update_ListSC(parcoords.brushed())        
       })
     })
   };

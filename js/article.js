@@ -31,3 +31,22 @@ function update_ListArticle(data) {
             "mouseout": parcoords.unhighlight
         });
 }
+
+function update_ListSC(data) {
+    var row = d3.select("#listArticle")                      // data ready
+        .html("")
+        .selectAll("div")
+        .data(data)
+        .enter().append("div")
+        .attr("class", function (d) { return ("articleOff"); })
+        .text(function (d) { return d.title })
+        .on("click", function (d) {
+            d3.select(".articleOn").classed("articleOn", false)
+            this.classList.add("articleOn")
+            __zz.onArticle = d.title
+            $('#summaryArticle').html('<b>' + d.title + '</b><br><hr>' +d.paragraphs.join('<br>') + '<br><hr>' + d.notes)
+        }).on({
+            "mouseover": function (d) { parcoords.highlight([d]) },
+            "mouseout": parcoords.unhighlight
+        });
+}
