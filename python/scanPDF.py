@@ -1,8 +1,10 @@
 import pdfplumber
+from PyPDF2 import PdfFileWriter, PdfFileReader
 import re, glob
 import pandas as pd
 folders = ['L:\\github\\']
-out_folder = 'L:\\github\\zz\\data\\'
+out_folder_idx = 'L:\\github\\zz\\data\\'
+out_folder_pdf = 'L:\\github\\zz\\data\\pdf\\'
 paperList = pd.DataFrame([], columns= ["年", "月", "期","标题","栏目","栏目e","行业","作者","内容"])
 # file=r'中行2019.01月刊完整版.pdf'
 # file= folder + file
@@ -10,8 +12,8 @@ paperList = pd.DataFrame([], columns= ["年", "月", "期","标题","栏目","�
 def firstP(author,p0=4):
     p1 = p0
     while (p1 < len(pdf.pages)):
-        idx = pdf.pages[p1].within_bbox((50,50,590,400),False).extract_text().find(author)
-        if idx > 0:
+        if re.search(author, pdf.pages[p1].within_bbox((50,50,590,400),False).extract_text()):
+            paperPages.append(p1)
             txt = pdf.pages[p1].within_bbox((50,0,300,730),False).extract_text()
             idx = txt.find('\n')
             return [txt[idx+1:]+ ' ...',p1+1] 
@@ -19,11 +21,11 @@ def firstP(author,p0=4):
             p1=p1+1
     return ['not found', p0]
 
-
-
 for folder in folders:
     files = glob.glob(folder + r"*.pdf")
+    paperPages = []
     for file in files:
+        paperPages = []
         p0=4
         with pdfplumber.open(file) as pdf:
             # page 1
@@ -46,7 +48,7 @@ for folder in folders:
                 idx = sum(1 for x in idxColumn if x < idxPaper)-1
                 columnC = columnChs[idx]
                 columnE = columnEng[idx]
-                [txt1, p0] = firstP(author.split(' ')[0],p0)
+                [txt1, p0] = firstP(author.replace(' ','[ ]*'),p0)       #author.split(' ')[0]         
                 paperList.loc[len(paperList)] =[year, month, no, title, columnC, columnE,'--', author,txt1]
             # page 3
             txt = pdf.pages[3].within_bbox((0,400,375,800),False).extract_text()
@@ -68,7 +70,17 @@ for folder in folders:
                 idx = sum(1 for x in idxColumn if x < idxPaper)-1
                 columnC = columnChs[idx]
                 columnE = columnEng[idx]
-                [txt1, p0] = firstP(author.split(' ')[0],p0)
+                [txt1, p0] = firstP(author.replace(' ','[ ]*'),p0)  #author.split(' ')[0]
                 paperList.loc[len(paperList)] =[year, month, no, title, columnC, columnE,'--', author,txt1]
                 paperList.loc[len(paperList)] =[year, month, no, title.strip(), columnC, columnE,'--', author,txt1]
-            paperList.to_csv(out_folder+ r'index.csv', index=True,index_label='#')
+            paperList.to_csv(out_folder_idx+ r'index.csv', index=True,index_label='#')
+            paperPages.append(len(pdf.pages)-2)
+            pdfOutName = out_folder_pdf + '_'.join(['gjjr', year,month])
+            for i in range(len(paperPages)-1):
+                input_pdf = PdfFileReader(file)
+                output = PdfFileWriter()
+                for j in range(paperPages[i],paperPages[i+1]):
+                    output.addPage(input_pdf.getPage(j))
+                with open(pdfOutName + '_' +str(i+1).zfill(2) +".pdf", "wb") as output_stream:
+                    output.write(output_stream)
+
