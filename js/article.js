@@ -39,12 +39,12 @@ function update_ListSC(data) {
         .data(data)
         .enter().append("div")
         .attr("class", function (d) { return ("articleOff"); })
-        .text(function (d) { return d.title })
+        .text(function (d) { return d.标题 })
         .on("click", function (d) {
             d3.select(".articleOn").classed("articleOn", false)
             this.classList.add("articleOn")
-            __zz.onArticle = d.title
-            $('#summaryArticle').html('<b>' + d.title + '</b><br><hr>' +d.paragraphs.join('<br>') + '<br><hr>' + d.notes)
+            __zz.onArticle = d.标题
+            $('#summaryArticle').html('<b>' + d.标题 + '</b><br><hr>' +d.作者 )
         }).on({
             "mouseover": function (d) { parcoords.highlight([d]) },
             "mouseout": parcoords.unhighlight

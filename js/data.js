@@ -1,16 +1,18 @@
 var __zz = {
-  csv: './data/dataInGR.csv',
+  csv0: './data/dataInGR.csv',
+  csv: './data/index.csv',
   json: './data/sc.json',
   config_hm : {
     // keyHide: ['QC', 'info_further', 'job(s)','team(s)','rank','owner','added_by','source']
-    keyHide: ['paragraphs', 'notes','title']
+    // keyHide: ['paragraphs', 'notes','title']
+    keyHide: ['标题', '作者']
   }
 
 }
 function refresh_pc(filtered = 0) {
     d3.select("#vizPC").html("")
-    // d3.csv(__zz.csv, function (data) {      // to set "" to undifined for showing invalid value
-    d3.json(__zz.json, function (data) {      // to set "" to undifined for showing invalid value
+    d3.csv(__zz.csv, function (data) {      // to set "" to undifined for showing invalid value
+    // d3.json(__zz.json, function (data) {      // to set "" to undifined for showing invalid value
       // for combined-column
       // var cmbColumns = Object.keys(data[0]).filter(v => v.slice(-3) == '(s)')
       // if (cmbColumns.length>0) {
@@ -19,10 +21,10 @@ function refresh_pc(filtered = 0) {
       //   }) 
       // }
       data = data.slice(0,100)
-      data.forEach(v => {
-        if (v.title) return
-        v.title = v.paragraphs[0].replaceAll('。','')
-      })
+      // data.forEach(v => {
+      //   if (v.title) return
+      //   v.title = v.paragraphs[0].replaceAll('。','')
+      // })
       var treeData_filter = [  
         {id: 'string_', type:'group',text:'Column in string',children:[]},
         {id: 'number_', type:'group',text:'Column in number',children:[]}
