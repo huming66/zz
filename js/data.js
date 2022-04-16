@@ -5,7 +5,7 @@ var __zz = {
   config_hm : {
     // keyHide: ['QC', 'info_further', 'job(s)','team(s)','rank','owner','added_by','source']
     // keyHide: ['paragraphs', 'notes','title']
-    keyHide: ['标题', '作者']
+    keyHide: ['标题', '作者','内容']
   }
 
 }

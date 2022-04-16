@@ -44,7 +44,7 @@ function update_ListSC(data) {
             d3.select(".articleOn").classed("articleOn", false)
             this.classList.add("articleOn")
             __zz.onArticle = d.标题
-            $('#summaryArticle').html('<b>' + d.标题 + '</b><br><hr>' +d.作者 )
+            $('#summaryArticle').html('<b>' + d.标题 + '</b>, ' +d.作者 + '<br><hr>' +d.内容  )
         }).on({
             "mouseover": function (d) { parcoords.highlight([d]) },
             "mouseout": parcoords.unhighlight
