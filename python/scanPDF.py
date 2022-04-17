@@ -2,9 +2,9 @@ import pdfplumber
 from PyPDF2 import PdfFileWriter, PdfFileReader
 import re, glob
 import pandas as pd
-folders = ['L:\\github\\']
-out_folder_idx = 'L:\\github\\zz\\data\\'
-out_folder_pdf = 'L:\\github\\zz\\data\\pdf\\'
+folders = ['Z:\\zz\\']#['L:\\github\\']
+out_folder_idx = 'Z:\\zz\\paper\\'#'L:\\github\\zz\\data\\'
+out_folder_pdf = 'Z:\\zz\\paper\\' #'L:\\github\\zz\\data\\pdf\\'
 paperList = pd.DataFrame([], columns= ["年", "月", "期","标题","栏目","栏目e","行业","作者","内容"])
 # file=r'中行2019.01月刊完整版.pdf'
 # file= folder + file

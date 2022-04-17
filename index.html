@@ -21,11 +21,16 @@
     <link rel="stylesheet" href="./css/article.css">
 </head>
 
+<template id = 'paper_tab'>
+    <input type="radio" id="tab_xxx" name="hmTabs"> <label for="tab_xxx">文章索引</label>
+    <div class="tab hmTab">  
+
+    </div>
+</template>
+
 <body>
     <div id="tableTemplate"></div>
     <div class="hmTabs" onchange="tabChange(this)">
-
-
         <input type="radio" id="tab_1" name="hmTabs" checked="checked" value="lv1"> <label for="tab_1">文章索引</label>
         <div class="tab hmTab">
                 <div class="left parcoords" id="vizPC" onmouseup="resize_pc()">
@@ -39,8 +44,6 @@
                         文章摘要<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
                     </div>
                 </div>
-
-        
         </div>
 
         <input type="radio" id="tab_5" name="hmTabs" value="info"><label for="tab_5">Info.</label>
@@ -93,7 +96,10 @@
 
             </div>
         </div>
-
+        <input type="radio" id="kkkk" name="hmTabs"> <label for="kkkk">文章</label>
+        <div class="tab">  
+            <iframe src="URL" height="200" width="300"></iframe>
+        </div>
 
     </div>
 </body>
