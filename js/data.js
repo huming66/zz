@@ -21,6 +21,7 @@ function refresh_pc(filtered = 0) {
       //   }) 
       // }
       data = data.slice(500)
+      data.forEach(d => d['#'] = d['#']-500)
       // data.forEach(v => {
       //   if (v.title) return
       //   v.title = v.paragraphs[0].replaceAll('。','')
