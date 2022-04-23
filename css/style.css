@@ -122,12 +122,14 @@
   
   /* hmhm: for text on axis.tick only */
   g.dimension g.tick text {
-    text-shadow: 0 1px 0 #ddd, 1px 0 0 #ddd, 0 -1px 0 #ddd, -1px 0 0 #ddd;
-    font-size: 15px !important;
-    transform: translate(-0px, -5px) rotate(-0deg); 
+    text-shadow: 0 2px 0 #ddd, 1px 0 0 #ddd, 0 -1px 0 #ddd, -1px 0 0 #ddd;
+    font-size: 12px !important;
+    transform: translate(-0px, -5px) rotate(-15deg); 
   }
   g.dimension g.tick text:hover {
-    font-size: 120% !important;
+    text-shadow: 0 2px 0 #00d, 1px 0 0 #00d, 0 -1px 0 #00d, -1px 0 0 #00d;
+    font-size: 180% !important;
+    cursor: crosshair;
   }
   /* hmhm: for axis title only */
   g.dimension g.axis text.label {           

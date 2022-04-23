@@ -20,7 +20,7 @@ function refresh_pc(filtered = 0) {
       //     data = brkColumn(data, col)
       //   }) 
       // }
-      data = data.slice(0,100)
+      data = data.slice(500)
       // data.forEach(v => {
       //   if (v.title) return
       //   v.title = v.paragraphs[0].replaceAll('。','')
@@ -121,7 +121,7 @@ function refresh_pc(filtered = 0) {
       parcoords = d3.parcoords(__zz.config_hm)("#vizPC")  //hmhm: pass the config_hm
         .data(data)
         .hideAxis(__zz.config_hm.keyHide)
-        .color('green')
+        .color('rgba(0,200,100,0.4)')
         .alpha(0.90)
         .composite("darken")
         .margin({ top: 50, left: 80, bottom: 80, right: 30 })
