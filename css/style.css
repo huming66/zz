@@ -157,6 +157,7 @@
   iframe {
     resize: both;
     overflow: auto;
+    height: "800px";
   }
   
   
