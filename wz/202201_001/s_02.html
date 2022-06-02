@@ -2,7 +2,14 @@
     details{
         background-color: lightsteelblue;
     }
-
+    details[open] summary::after {
+            content: attr(data-open);
+            color: grey;
+        }
+    details:not([open]) summary::after {
+        content: attr(data-close);
+        color: darkcyan;
+    }
 </style>
 
 <p style="text-align:justify"><span style="font-size:10.5pt"><span style="font-family:&quot;Times New Roman&quot;,serif"><span style="font-family:宋体">（一）普惠金融指标体系构建和数据来源</span></span></span></p>
@@ -10,7 +17,7 @@
 <p style="text-align:justify"><span style="font-size:10.5pt"><span style="font-family:&quot;Times New Roman&quot;,serif"><span style="font-family:宋体">普惠金融是指立足机会平等要求和商业可持续原则，以可负担的成本为有金融服务需求的社会各阶层和社会群体提供适当、有效的金融服务</span><a href="#_ftn1" name="_ftnref1" title=""><span style="font-size:10.5pt"><span style="font-family:&quot;Times New Roman&quot;,serif">[1]</span></span></a><span style="font-family:宋体">。首先，机会平等意味着在金融抑制的社会环境中面临融资约束的小微企业、民营企业、农民等社会边缘群体同样有权利享有正规的金融服务；其次，商业可持续原则意味着普惠金融不是金融扶贫，更不是政府财政扶贫的替代品，而是金融机构对商业盈利和社会责任的平衡，以可负担的成本、可持续的方式为社会大众提供金融服务；最后，适当、有效意味着普惠金融不是&ldquo;粗制滥造&rdquo;，而是具备高质量和高效用属性的金融服务，不可因为&ldquo;普惠&rdquo;就降低服务标准。普惠金融指标体系的构建应至少体现机会平等、商业可持续的原则以及适当、有效的目标要求。具体而言，与机会平等相对应，普惠金融指标体系的第一个维度为金融服务的可得性；与商业可持续的原则相对应，普惠金融指标体系的第二个维度为金融服务的可负担性；与适当、有效的目标要求相对应，普惠金融指标体系的第三和第四个维度为金融服务的质量、金融服务的使用效用性。针对各维度指标的选取，本文参照具有代表性专家学者的观点，并着重借鉴中国人民银行发布的《</span>2017<span style="font-family:宋体">年中国普惠金融指标分析报告》（以下简称报告）。鉴于本文旨在考察</span>2005<span style="font-family:宋体">&mdash;</span>2016<span style="font-family:宋体">年中国省际普惠金融发展状况，报告中的指标选取存在如下两方面问题：一是指标的时间跨度，报告中的部分指标通过问卷调查收集，仅反映</span>2017<span style="font-family:宋体">年普惠金融的发展状况，而本文研究的时间跨度为</span>2005<span style="font-family:宋体">&mdash;</span>2016<span style="font-family:宋体">年；二是指标的空间跨度，报告中部分指标仅涉及全国层面的普惠金融发展状况，对各地区的关注不足，而本文研究的空间跨度为中国各省（市、自治区）。此外，考虑到报告不包含可负担性维度，且本文对表征可负担性的指标选取较少，因此，本文将可负担性纳入质量维度。最终，本文构建的中国省际普惠金融指标体系包含金融服务的可得性、使用效用性和质量三个维度共</span>29<span style="font-family:宋体">个指标（见表</span>1<span style="font-family:宋体">）。</span></span></span></p>
 
 <details class="level2">
-    <summary>表1  中国省际普惠金融指标体系</summary>
+    <summary data-open=" ... 点击关闭" data-close=" ... 点击展开">表1  中国省际普惠金融指标体系</summary>
     <table cellpadding="0" cellspacing="0" class="Table" style="border-collapse:collapse; border:none">
         <tbody>
             <tr>
@@ -310,7 +317,7 @@
 <p><span style="font-size:9pt"><span style="font-family:&quot;Times New Roman&quot;,serif"><a href="#_ftnref1" name="_ftn1" title=""><span style="font-size:9.0pt"><span style="font-family:&quot;Times New Roman&quot;,serif">[1]</span></span></a> <span style="font-family:宋体">东部地区：北京、天津、河北、辽宁、上海、江苏、浙江、福建、山东、广东、海南；中部地区：山西、吉林、黑龙江、安徽、江西、河南、湖北、湖南；西部地区：内蒙古、广西、重庆、四川、贵州、云南、陕西、甘肃、青海、宁夏、新疆。</span></span></span></p>
 
 <details open>
-    <summary>图1  全国及三大区域普惠金融发展水平演变</summary>   
+    <summary data-open=" ... 点击关闭" data-close=" ... 点击展开">图1  全国及三大区域普惠金融发展水平演变</summary>   
     <table border="1" cellpadding="1" cellspacing="1" style="width:500px">
         <tbody>
             <tr>
@@ -340,6 +347,6 @@
 <p><span style="font-size:9pt"><span style="font-family:&quot;Times New Roman&quot;,serif"><a href="#_ftnref1" name="_ftn1" title=""><span style="font-size:9.0pt"><span style="font-family:&quot;Times New Roman&quot;,serif">[1]</span></span></a> <span style="font-family:宋体">东北综合经济区：辽宁、吉林、黑龙江；北部沿海综合经济区：北京、天津、河北、山东；东部沿海综合经济区：上海、江苏、浙江；南部沿海综合经济区：福建、广东、海南；黄河中游综合经济区：陕西、山西、河南、内蒙古；长江中游综合经济区：湖北、湖南、江西、安徽；大西南综合经济区：云南、贵州、四川、重庆、广西；大西北综合经济区：甘肃、青海、宁夏、新疆</span><span style="font-family:宋体">。</span></span></span></p>
 
 <details open style="width:80%">
-    <summary>图2  全国及八大综合经济区普惠金融发展水平演变</summary>
+    <summary data-open=" ... 点击关闭" data-close=" ... 点击展开">图2  全国及八大综合经济区普惠金融发展水平演变</summary>
     <embed style="border: none; overflow: hidden" src="./chart2.html" dpi="200" width="100%" height="600px"/>
 </details>

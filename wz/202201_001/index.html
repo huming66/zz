@@ -25,51 +25,58 @@
             background-color: lightgrey;
             border: 1px solid grey;
         }
-
+        details[open] summary::after {
+            content: attr(data-open);
+            color: grey;
+        }
+        details:not([open]) summary::after {
+            content: attr(data-close);
+            color: darkcyan;
+        }
     </style>
 </head>
 
 <body>
     <h2>中国普惠金融的区域差异与极化趋势：2005—2016</h2>
     <details>
-        <summary>作者</summary>
+        <summary data-open=" ... 点击关闭" data-close=" ... 点击展开">作者</summary>
         <iframe src="./author.html" title="作者"></iframe>
     </details>
     <details>
-        <summary>内容摘要</summary>
+        <summary data-open=" ... 点击关闭" data-close=" ... 点击展开">内容摘要</summary>
         <iframe src="./summary.html" title=""></iframe>
     </details>
     <details>
-        <summary>引  言</summary>
+        <summary data-open=" ... 点击关闭" data-close=" ... 点击展开">引  言</summary>
         <iframe src="./preface.html" title=""></iframe>
     </details>
     <details class='section'>
-        <summary>一、文献综述</summary>
+        <summary data-open=" ... 点击关闭" data-close=" ... 点击展开">一、文献综述</summary>
         <!-- <embed style="border: none; overflow: hidden; resize :both;" src="./s1.html" width="100%" resize="both" />   -->
         <iframe src="./s_01.html" title="s1"></iframe>
     </details >    
     <details open class='section'>
-        <summary>二、中国省际普惠金融发展水平测算</summary>
+        <summary data-open=" ... 点击关闭" data-close=" ... 点击展开">二、中国省际普惠金融发展水平测算</summary>
         <iframe src="./s_02.html" title="s2" style="height: 600px;"></iframe>
     </details >    
     <details class='section'>
-        <summary>三、中国普惠金融发展的区域差异分析</summary>
+        <summary data-open=" ... 点击关闭" data-close=" ... 点击展开">三、中国普惠金融发展的区域差异分析</summary>
         <iframe src="./s_03.html" title="s3"></iframe>
     </details >  
     <details class='section'>
-        <summary>四、中国普惠金融发展的极化趋势分析</summary>
+        <summary data-open=" ... 点击关闭" data-close=" ... 点击展开">四、中国普惠金融发展的极化趋势分析</summary>
         <iframe src="./s_04.html" title="s1"></iframe>
     </details >  
     <details class='section'>
-        <summary>五、结论与政策启示</summary>
+        <summary data-open=" ... 点击关闭" data-close=" ... 点击展开">五、结论与政策启示</summary>
         <iframe src="./s_05.html" title="s1"></iframe>
     </details >  
     <details class=''>
-        <summary>参考文献</summary>
+        <summary data-open=" ... 点击关闭" data-close=" ... 点击展开">参考文献</summary>
         <iframe src="./reference.html" title="s1"></iframe>
     </details >  
     <details class=''>
-        <summary>英文摘要</summary>
+        <summary data-open=" ... 点击关闭" data-close=" ... 点击展开">英文摘要</summary>
         <iframe src="./summaryEng.html" title="s1"></iframe>
     </details >      
 
